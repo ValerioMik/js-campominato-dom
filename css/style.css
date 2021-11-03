@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(39, 16, 250);
+   
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  
+}
+
+
+#campominato{
+    display: flex;
+    justify-content:start;
+    flex-wrap: wrap;
+    background-color: grey;
+    margin: 0 auto;
+    margin-top: 60px;
+    border: solid 6px black;
+    width: 800px;
+}
+
+.difficile{
+    background-color: rgb(59, 59, 59);
+    width: calc((100% / 10) - 20px);
+    height: calc((100% / 10)- 20px);
+    aspect-ratio: 1;
+    margin: 0 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.medio{
+    background-color: rgb(59, 59, 59);
+    width: calc((100% / 9) - 20px);
+    height: calc((100% / 9)- 20px);
+    aspect-ratio: 1;
+    margin: 0 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.facile{
+    background-color: rgb(59, 59, 59);
+    width: calc((100% / 7) - 20px);
+    height: calc((100% / 7)- 20px);
+    aspect-ratio: 1;
+    margin: 0 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.active{
+    background-color: rgb(250, 250, 250);
+    border: solid 4px rgb(0, 0, 0);
+    
+
+;
+}
+
