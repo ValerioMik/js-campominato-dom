@@ -54,6 +54,7 @@ Al termine della partita il software deve scoprire tutte le bombe e comunicare i
 
 const difficoltaScelta = prompt("scegli tra FACILE,MEDIO,DIFFICILE");
 const numeroDiquadrati = document.getElementById("campominato");
+var punteggio =
 
 
 
@@ -75,16 +76,20 @@ if (livello === 49) {
     RisultatoLiv = "difficile"
 };
 
+let mina = creaBombe (livello);
 
 for (let i = 1; i <= livello; i++) {
     let creaQuadrati = generaElemento("div", RisultatoLiv,);
-    var Mina = creaBomba(livello)
+    creaQuadrati.setAttribute("id",i);
     creaQuadrati.addEventListener("click",
+
         function () {
+            let id = parseInt(creaQuadrati.id);
             creaQuadrati.classList.add("active");
             creaQuadrati.innerText = i;
-            if(i == Mina){
-            creaQuadrati.classList.add("bomba");
+            if(mina.includes(id)) {
+                creaQuadrati.classList.add("bomba");
+                
             }
         });
     numeroDiquadrati.append(creaQuadrati);
@@ -103,7 +108,7 @@ function generaElemento(elementoGen, classAD) {
     return node
 }
 
-function creaBomba(somma1){
+function creaBombe(somma1){
     const bomba =[];
     while(bomba.length < 16){
         let RandomBomba = Math.floor(Math.random()*somma1) + 1;
