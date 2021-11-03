@@ -73,7 +73,10 @@ body{
     background-color: rgb(250, 250, 250);
     border: solid 4px rgb(0, 0, 0);
     
+}
 
-;
+.bomba{
+    background-color: rgb(255, 0, 0); 
+    border: solid 4px rgb(0, 0, 0);
 }
 

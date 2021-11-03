@@ -78,10 +78,14 @@ if (livello === 49) {
 
 for (let i = 1; i <= livello; i++) {
     let creaQuadrati = generaElemento("div", RisultatoLiv,);
+    var Mina = creaBomba(livello)
     creaQuadrati.addEventListener("click",
         function () {
             creaQuadrati.classList.add("active");
             creaQuadrati.innerText = i;
+            if(i == Mina){
+            creaQuadrati.classList.add("bomba");
+            }
         });
     numeroDiquadrati.append(creaQuadrati);
 
@@ -99,7 +103,18 @@ function generaElemento(elementoGen, classAD) {
     return node
 }
 
-
+function creaBomba(somma1){
+    const bomba =[];
+    while(bomba.length < 16){
+        let RandomBomba = Math.floor(Math.random()*somma1) + 1;
+        console.log("numero generato = " + RandomBomba);
+        let controllo = bomba.includes(RandomBomba)
+            if(controllo == false){
+                bomba.push(RandomBomba);
+            }
+    }
+    return bomba;
+}
 
 
 
