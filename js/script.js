@@ -54,7 +54,7 @@ Al termine della partita il software deve scoprire tutte le bombe e comunicare i
 
 const difficoltaScelta = prompt("scegli tra FACILE,MEDIO,DIFFICILE");
 const numeroDiquadrati = document.getElementById("campominato");
-var punteggio =
+var score = 0;
 
 
 
@@ -89,7 +89,9 @@ for (let i = 1; i <= livello; i++) {
             creaQuadrati.innerText = i;
             if(mina.includes(id)) {
                 creaQuadrati.classList.add("bomba");
-                
+                alert("hai perso ed hai totalizzato "+ score + " punti" );
+            }else if (mina !== id){
+               score++;
             }
         });
     numeroDiquadrati.append(creaQuadrati);
